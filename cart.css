@@ -1,0 +1,37 @@
+.absolute_parent{
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+
+.商品{
+  position: absolute;
+  top: 140px;
+  left: 330px;
+  font-size: 200%;
+}
+
+.商品画像{
+  position: absolute;
+  top: 200px;
+  left: 230px;
+}
+
+.詳細{
+  position: absolute;
+  top: 250px;
+  left: 500px;
+  font-size: 150%;
+}
+
+.買い物を続ける{
+  position: absolute;
+  top: 450px;
+  left: 370px;
+}
+
+.レジへ進む{
+  position: absolute;
+  top: 450px;
+  left: 700px;
+}
