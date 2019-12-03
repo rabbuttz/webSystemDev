@@ -10,6 +10,10 @@ header{
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
 }
 
+body {
+    margin: 0;
+}
+
 h1{
     color: white;
     position: absolute;
@@ -20,11 +24,38 @@ h1{
 h2 {
     position: absolute;
     top: 120px;
+    padding-left: 10px;
 }
 
 ul {
     position: absolute;
     top: 160px;
+    left: 10px;
+    font-size: 150%;
+    padding-top: 5px;
+}
+
+li {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#left_bar{
+    width:300px;
+    min-height:500px;
+    height: 100%;
+    float:left;
+    margin-top:10px;
+    background-color: skyblue;
+}
+
+#main_contents {
+    margin-left:300px;
+    width:100%;
+    min-height:500px;
+    height:100%;
+    background-color:#009b9f;
+    margin-top:10px;
 }
 
 /*
