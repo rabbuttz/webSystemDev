@@ -1,0 +1,80 @@
+.absolute_parent{
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+
+.商品{
+  position: absolute;
+  top: 150px;
+  left: 700px;
+  font-size: 200%;
+}
+
+.商品画像{
+  position: absolute;
+  top: 150px;
+  left: 200px;
+}
+
+.詳細{
+  position: absolute;
+  top: 250px;
+  left: 500px;
+  font-size: 150%;
+}
+
+.買い物を続ける{
+  position: absolute;
+  top: 450px;
+  left: 370px;
+}
+
+.レジへ進む{
+  position: absolute;
+  top: 450px;
+  left: 700px;
+}
+
+.現在の在庫状況{
+  position: absolute;
+  top: 350px;
+  left: 700px;
+}
+
+.カートに入れる{
+  position: absolute;
+  top: 450px;
+  left: 700px;
+}
+
+
+
+p {
+  margin-left: 40%
+  padding: 10px;
+}
+
+.商品s{
+  position: fixed;
+  top: 150px;
+  left: 500px;
+  font-size: 200%;
+  margin: 3%,20%
+  padding: 10px;
+}
+
+a:hover {
+  color: #33eeee;
+}
+
+.btn{
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: 777777;
+  padding: 20px;
+  text-align: center;
+  color: blue;
+  width: 150px;
+  padding: 10px;
+}
