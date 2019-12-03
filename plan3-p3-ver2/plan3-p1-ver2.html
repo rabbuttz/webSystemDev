@@ -2,16 +2,27 @@
 <html lang="ja">
 <html>
 
- <title>二段階認証</title>
- <body>
- 
- <h1>電話番号を入力してください</h1>
- <input type="tel"> <br>
-<p class="mb5">
- <input type="button" onclick="location.href='sample.html'" value="戻る">
- <input type="button" onclick="location.href='plan3-p3-ver2.html'" value="送信">
-　
-　</body>
+<title>二段階認証</title>
+
+<body>
+
+    <h1>電話番号を入力してください</h1>
+    <input type="tel" id='tel' value=''> <br>
+    <p class="mb5">
+        <input type="button" onclick="location.href='sample.html'" value="戻る">
+        <input type="button" onclick="check()" value="送信">
+        　
+        　
+</body>
+
+<script>
+    function check() {
+        if (document.getElementById('tel').value == '') {
+            alert('電話番号を入力してください。');
+        } else {
+            location.href = 'plan3-p3-ver2.html';
+        }
+    }
+</script>
 
 </html>
-
