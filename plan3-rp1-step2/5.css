@@ -1,0 +1,114 @@
+/*body*/
+body {
+  color: #000000;
+  background: #aaccbb; 
+}
+
+/*パラグラフ*/
+p {
+  padding: 5px;
+  margin-left: 10%;
+  margin-right: 10%;
+  line-height: 1.6;
+  color: #000000;
+  font-size:15pt;
+}
+
+
+
+/*画像の設定*/
+.left{float:left;
+		margin-left:10%}
+
+/*見出し*/
+H1 {
+  color: #eeeeee;
+  background: #0f3d6f;
+  border-width: 0px 0px 5px 5px;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: 35pt;
+  text-align: center;
+  padding: 20px;
+}
+
+H2 {
+  color: #88ffbb;
+  background: #9999ff;
+  margin-left: 5%;
+  margin-right: 5%;
+  font-size: 30pt;
+  text-align: left;
+  padding: 10px;
+  
+  border-style: double;
+  border-width: 15px 0px;
+  border-top-color:#6600cc;
+  border-bottom-color:#cc99cc;
+  
+}
+
+H3 {
+   border-bottom-style: dashed;
+  border-width: 5px;
+  border-color:#6600cc;
+  margin-top:5%;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: 30pt;
+  text-align: left;
+  padding-top: 10px;
+  
+}
+H4 { 
+  margin-top:2%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 0px;
+  font-size: 20pt;
+ 
+}
+
+
+/*li要素*/
+li {
+  line-height: 1.4;
+  padding: 2px 5px;
+  margin-right: 10%;
+  margin-left: 50%;
+  font-size:15pt;
+}
+.list1{list-style-type:square;}
+.list2{list-style-type:circle}
+
+/*表*/
+table{margin-left:10%;
+	margin-right:5%;
+	margin-top:5px;
+	font-size:20px}
+
+
+/*水平線の横左マージン指定*/
+hr {
+  margin-left: 5%;
+}
+
+
+/*リンク*/
+a {
+  color: #660099;
+}
+
+a:hover {
+  color: #990099;
+}
+
+.btn{
+  border: 1px solid green;
+  border-radius: 5px;
+  background-color: green;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  width: 150px;
+}
