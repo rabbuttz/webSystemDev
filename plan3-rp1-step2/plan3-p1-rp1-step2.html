@@ -1,26 +1,35 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html lang="ja">
 
-	<head>
- 		<meta http-equiv="Content-Type" content="text/html; charset=shift_jis">
- 		<meta name="author" content="70812014‘åX’¼÷">
- 		<meta http-equiv="Content-Style-Type" content="text/css">
- 		<meta name="keywords" content="">
-			<title>T‘“X</title>
-		<link rel="stylesheet" href="./5.css" type="text/css">
-	</head>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="author" content="70812014å¤§æ£®ç›´æ¨¹">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta name="keywords" content="">
+	<title>Tæ›¸åº—</title>
+	<link rel="stylesheet" href="./5.css" type="text/css">
+</head>
 <html>
 
- <title>“ñ’iŠK”FØ</title>
- <body>
- 
- <h1>“d˜b”Ô†‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢</h1>
- <input type="tel"> <br>
-<p class="mb5">
- <input type="button" onclick="location.href='sample.html'" value="–ß‚é">
- <input type="button" onclick="location.href='plan3-p3-rp1-step2.html'" value="‘—M">
-@
-@</body>
+<title>äºŒæ®µéšèªè¨¼</title>
+
+<body>
+
+	<h1>é›»è©±ç•ªå·ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„</h1>
+	<input type="tel" id="tel" value> <br>
+	<p class="mb5">
+		<input type="button" onclick="location.href='sample.html'" value="æˆ»ã‚‹">
+		<input type="button" onclick="check()" value="é€ä¿¡">
+</body>
+
+<script>
+	function check() {
+		if (document.getElementById('tel').value == '') {
+			alert('é›»è©±ç•ªå·ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„');
+		} else {
+			location.href = 'plan3-p3-rp1-step2.html';
+		}
+	}
+</script>
 
 </html>
-
