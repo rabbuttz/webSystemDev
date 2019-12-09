@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>トレンドを追う</title>
 </head>
 
 <header>
@@ -40,6 +40,7 @@
                         <img class = book src="./pic/book_sample.png" alt="本">
                         <div class="pdc_txt">
                             <p class = prc>¥0101</p>
+                            <a class = cart href="./ContentInTheCart.html">カートに入れる</a>
                             <p class="txt">詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細</p>
                         </div>
                     </li>
@@ -461,35 +462,35 @@
         var cont10 = document.getElementById('contents10');
 
         function setState(isA) {
-        btn1.className = (isA == 0) ? 'btn inactive' : 'btn'; // Aのとき非表示
-        contents1.className = (isA == 0) ? 'boxDisplay' : 'boxNone'; // Aのとき表示
+        btn1.className = (isA == 0) ? 'btn inactive' : 'btn'; // 0のとき非表示
+        contents1.className = (isA == 0) ? 'boxDisplay' : 'boxNone'; // 0のとき表示
 
-        btn2.className = (isA == 1) ? 'btn inactive' : 'btn'; // Bのとき非表示
-        contents2.className = (isA == 1) ? 'boxDisplay' : 'boxNone'; // Bのとき表示
+        btn2.className = (isA == 1) ? 'btn inactive' : 'btn'; // 1のとき非表示
+        contents2.className = (isA == 1) ? 'boxDisplay' : 'boxNone'; // 1のとき表示
 
-        btn3.className = (isA == 2) ? 'btn inactive' : 'btn'; // Bのとき非表示
-        contents3.className = (isA == 2) ? 'boxDisplay' : 'boxNone'; // Bのとき表示
+        btn3.className = (isA == 2) ? 'btn inactive' : 'btn'; // 2のとき非表示
+        contents3.className = (isA == 2) ? 'boxDisplay' : 'boxNone'; // 2のとき表示
 
-        btn4.className = (isA == 3) ? 'btn inactive' : 'btn'; // Bのとき非表示
-        contents4.className = (isA == 3) ? 'boxDisplay' : 'boxNone'; // Bのとき表示
+        btn4.className = (isA == 3) ? 'btn inactive' : 'btn'; // 3のとき非表示
+        contents4.className = (isA == 3) ? 'boxDisplay' : 'boxNone'; // 3のとき表示
 
-        btn5.className = (isA == 4) ? 'btn inactive' : 'btn'; // Bのとき非表示
-        contents5.className = (isA == 4) ? 'boxDisplay' : 'boxNone'; // Bのとき表示
+        btn5.className = (isA == 4) ? 'btn inactive' : 'btn'; // 4のとき非表示
+        contents5.className = (isA == 4) ? 'boxDisplay' : 'boxNone'; // 4のとき表示
 
-        btn6.className = (isA == 5) ? 'btn inactive' : 'btn'; // Bのとき非表示
-        contents6.className = (isA == 5) ? 'boxDisplay' : 'boxNone'; // Bのとき表示
+        btn6.className = (isA == 5) ? 'btn inactive' : 'btn'; // 5のとき非表示
+        contents6.className = (isA == 5) ? 'boxDisplay' : 'boxNone'; // 5のとき表示
 
-        btn7.className = (isA == 6) ? 'btn inactive' : 'btn'; // Bのとき非表示
-        contents7.className = (isA == 6) ? 'boxDisplay' : 'boxNone'; // Bのとき表示
+        btn7.className = (isA == 6) ? 'btn inactive' : 'btn'; // 6のとき非表示
+        contents7.className = (isA == 6) ? 'boxDisplay' : 'boxNone'; // 6のとき表示
 
-        btn8.className = (isA == 7) ? 'btn inactive' : 'btn'; // Bのとき非表示
-        contents8.className = (isA == 7) ? 'boxDisplay' : 'boxNone'; // Bのとき表示
+        btn8.className = (isA == 7) ? 'btn inactive' : 'btn'; // 7のとき非表示
+        contents8.className = (isA == 7) ? 'boxDisplay' : 'boxNone'; // 7のとき表示
 
-        btn9.className = (isA == 8) ? 'btn inactive' : 'btn'; // Bのとき非表示
-        contents9.className = (isA == 8) ? 'boxDisplay' : 'boxNone'; // Bのとき表示
+        btn9.className = (isA == 8) ? 'btn inactive' : 'btn'; // 8のとき非表示
+        contents9.className = (isA == 8) ? 'boxDisplay' : 'boxNone'; // 8のとき表示
 
-        btn10.className = (isA == 9) ? 'btn inactive' : 'btn'; // Bのとき非表示
-        contents10.className = (isA == 9) ? 'boxDisplay' : 'boxNone'; // Bのとき表示
+        btn10.className = (isA == 9) ? 'btn inactive' : 'btn'; // 9のとき非表示
+        contents10.className = (isA == 9) ? 'boxDisplay' : 'boxNone'; // 9のとき表示
       }
       setState(0);
 
