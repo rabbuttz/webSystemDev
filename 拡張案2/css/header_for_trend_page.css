@@ -108,7 +108,7 @@ li {
 /* マウスオーバー時のカラー */
 .button:hover {
     background-color: #26B8FF;
-    padding: 7px 0;
+    padding: 5px 0;
     text-align: center;
 }
 /* リンク領域のスタイル */

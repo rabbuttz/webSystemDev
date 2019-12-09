@@ -57,7 +57,6 @@
                     return a;
                 }
             } if (isClicked == true){
-                
                     str = (a+15).toString();
                     document.getElementById("td-1").innerText = str + "℃";
                     return a;
@@ -75,7 +74,6 @@
           <script type="text/javascript">
             function update2() {
               var b = Math.floor(Math.random() * 3) - 4;
-              
               if (b <= 25) {
                 str = b.toString();
                 document.getElementById("td-2").innerText = str + "℃";
@@ -187,7 +185,6 @@
         </td>
         <td id="td-8">
           <script type="text/javascript">
-          
             function update8() {
                 if(isClicked == false){
               var g = Math.floor(Math.random() * 2) + 330;
@@ -198,8 +195,6 @@
               document.getElementById("td-8").innerText = g + "ppm";
               return g;
             }
-        
-
         }
             var l = update8();
             timer8 = setInterval(() => {
@@ -241,7 +236,6 @@
         </td>
       </tr>
     </table>
-        
         <a href="#" class="btn-square-slant" onClick="management()">最適化</a>
   </body>
 </html>
