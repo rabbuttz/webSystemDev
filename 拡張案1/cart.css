@@ -1,0 +1,218 @@
+.absolute_parent{
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+
+.商品{
+  position: absolute;
+  top: 140px;
+  left: 330px;
+  font-size: 200%;
+}
+
+.商品画像{
+  position: absolute;
+  top: 200px;
+  left: 230px;
+}
+
+.詳細{
+  position: absolute;
+  top: 250px;
+  left: 500px;
+  font-size: 150%;
+}
+
+.買い物を続ける{
+  position: absolute;
+  top: 450px;
+  left: 370px;
+}
+
+.レジへ進む{
+  position: absolute;
+  top: 450px;
+  left: 700px;
+}
+
+.現在の在庫状況{
+  position: absolute;
+  top: 450px;
+  left: 370px;
+}
+
+.カートに入れる{
+  position: absolute;
+  top: 450px;
+  left: 700px;
+}
+
+
+
+p {
+  padding: 10px;
+}
+
+.商品s{
+  margin: 3%,20%;
+  padding: 10px;		
+}
+
+a:hover {
+  color: #33eeee;
+}
+
+.btn{
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color:antiquewhite;
+  padding: 20px;
+  text-align: center;
+  color: blue;
+  width: 150px;
+  padding: 10px;
+}
+/*拡張案1追加分*/
+
+li {
+    display: inline-block;
+    padding: 10px;
+}
+
+.item {
+    float: left;
+    margin-right: 10px;
+    padding: 10px;
+    width: 60px;
+    height: 60px;
+    background: #EF5F5D;
+    color: #fff;
+    list-style: none;
+    text-align: center;
+    line-height: 60px;
+    opacity: 0;
+}
+/*
+    .item:nth-child(1) {
+        -webkit-animation: example 0.5s ease 0.5s 1 forwards;
+        animation: example 0.5s ease 0.5s 1 forwards;
+    }
+
+    .item:nth-child(2) {
+        -webkit-animation: example 0.5s ease 1s 1 forwards;
+        animation: example 0.5s ease 1s 1 forwards;
+    }
+
+    .item:nth-child(3) {
+        -webkit-animation: example 0.5s ease 1.5s 1 forwards;
+        animation: example 0.5s ease 1.5s 1 forwards;
+    }*/
+.maru {
+    height: 200px;
+    width: 200px;
+    color:white;
+    border-radius: 50%;
+    line-height: 200px;
+    text-align: center;
+    background: gray;
+    font-size: 24px;
+    margin-left: 20px;
+
+}
+.wrapper {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 100px;
+    width: 100%;
+}
+
+.おすすめ商品画像 {
+    margin-top: 400px;
+    padding-top:10px;
+    display: block;
+}
+
+/* Btn 10  */
+.btn10 {
+    top: 40px;
+    font-family: "proxima-nova", sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    text-transform: uppercase !important;
+    letter-spacing: 2px;
+    color: #fff;
+    cursor: hand;
+    text-align: center;
+    text-transform: capitalize;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden !important;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    background: transparent !important;
+    z-index: 10;
+}
+
+
+    .btn10:hover {
+        border: 1px solid #071982;
+        color: #80ffd3 !important;
+    }
+
+    .btn10::before {
+        content: '';
+        width: 0%;
+        height: 100%;
+        display: block;
+        background: #071982;
+        position: absolute;
+        -ms-transform: skewX(-20deg);
+        -webkit-transform: skewX(-20deg);
+        transform: skewX(-20deg);
+        left: -10%;
+        opacity: 1;
+        top: 0;
+        z-index: -12;
+        -moz-transition: all .7s cubic-bezier(0.77, 0, 0.175, 1);
+        -o-transition: all .7s cubic-bezier(0.77, 0, 0.175, 1);
+        -webkit-transition: all .7s cubic-bezier(0.77, 0, 0.175, 1);
+        transition: all .7s cubic-bezier(0.77, 0, 0.175, 1);
+        box-shadow: 2px 0px 14px rgba(0,0,0,.6);
+    }
+
+    .btn10::after {
+        content: '';
+        width: 0%;
+        height: 100%;
+        display: block;
+        background: #80ffd3;
+        position: absolute;
+        -ms-transform: skewX(-20deg);
+        -webkit-transform: skewX(-20deg);
+        transform: skewX(-20deg);
+        left: -10%;
+        opacity: 0;
+        top: 0;
+        z-index: -15;
+        -webkit-transition: all .94s cubic-bezier(.2,.95,.57,.99);
+        -moz-transition: all .4s cubic-bezier(.2,.95,.57,.99);
+        -o-transition: all .4s cubic-bezier(.2,.95,.57,.99);
+        transition: all .4s cubic-bezier(.2,.95,.57,.99);
+        box-shadow: 2px 0px 14px rgba(0,0,0,.6);
+    }
+
+    .btn10:hover::before, .btn1O:hover::before {
+        opacity: 1;
+        width: 116%;
+    }
+
+    .btn10:hover::after, .btn1O:hover::after {
+        opacity: 1;
+        width: 120%;
+    }
