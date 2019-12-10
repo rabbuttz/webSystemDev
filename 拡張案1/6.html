@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>D3: A simple packed Bubble Chart</title>
+    <script type="text/javascript" src="https://d3js.org/d3.v4.min.js"></script>
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <link rel="stylesheet" href="cart.css" type="text/css">
+    <title>改善案1</title>
+</head>
+<body>
+    <header>
+        <link rel="stylesheet" type="text/css" href="header.css">
+        <h1>Y書店</h1>
+    </header>
+    <main>
+        <!--コメント-->
+
+        <h1>プログラミング・IoT・データ分析 を検索したあなたにおすすめ</h1>
+        <script type="text/javascript">
+
+            dataset = {
+                "children": [
+                { "Name": "機械学習", "Count": 43 },
+                { "Name": "AI", "Count": 41 },
+                { "Name": "人工知能", "Count": 58 },
+                { "Name": "ウェアラブルデバイス", "Count": 2 },
+                { "Name": "分析", "Count": 68 },
+                { "Name": "情報社会", "Count": 180 },
+                { "Name": "情報学", "Count": 171 },
+                { "Name": "プログラミング", "Count": 63 },
+                { "Name": "アルゴリズム", "Count": 56 },
+                { "Name": "人間", "Count": 151 },
+                { "Name": "ロボット", "Count": 48 },
+                { "Name": "データ", "Count": 148 },
+                { "Name": "コネクテッドカー", "Count": 4 },
+                { "Name": "AR", "Count": 3 },
+                { "Name": "ドローン", "Count": 13 },
+                { "Name": "VR", "Count": 13 },
+                { "Name": "インターネット", "Count": 132 },
+                { "Name": "モノ", "Count": 13 },
+                { "Name": "技術", "Count": 12 },
+                { "Name": "工業", "Count": 127 },
+                { "Name": "経済", "Count": 126 }]
+            };
+
+            var diameter = 600;
+            var color = d3.scaleOrdinal(d3.schemeCategory20);
+
+            var bubble = d3.pack(dataset)
+                .size([diameter, diameter])
+                .padding(1.5);
+
+            var svg = d3.select("body")
+                .append("svg")
+                .attr("width", diameter)
+                .attr("height", diameter)
+                .attr("class", "bubble");
+
+            var nodes = d3.hierarchy(dataset)
+                .sum(function (d) { return d.Count; });
+
+            var node = svg.selectAll(".node")
+                .data(bubble(nodes).descendants())
+                .enter()
+                .filter(function (d) {
+                    return !d.children
+                })
+                .append("g")
+                .attr("class", "node")
+                .attr("transform", function (d) {
+                    return "translate(" + d.x + "," + d.y + ")";
+                });
+
+            node.append("title")
+                .text(function (d) {
+                    return d.Name + ": " + d.Count;
+                });
+
+            node.append("circle")
+                .attr("r", function (d) {
+                    return d.r;
+                })
+                .style("fill", function (d, i) {
+                    return color(i);
+                });
+
+            node.append("text")
+                .attr("dy", ".2em")
+                .style("text-anchor", "middle")
+                .text(function (d) {
+                    return d.data.Name.substring(0, d.r / 3);
+                })
+                .attr("font-family", "sans-serif")
+                .attr("font-size", function (d) {
+                    return d.r / 5;
+                })
+                .attr("fill", "white");
+
+            node.append("text")
+                .attr("dy", "1.3em")
+                .style("text-anchor", "middle")
+                .text(function (d) {
+                    return d.data.Count;
+                })
+                .attr("font-family", "Gill Sans", "Gill Sans MT")
+                .attr("font-size", function (d) {
+                    return d.r / 5;
+                })
+                .attr("fill", "white");
+
+            d3.select(self.frameElement)
+                .style("height", diameter + "px");
+
+
+
+        </script>
+    </main>
+    <footer></footer>
+</body>
+</html>
