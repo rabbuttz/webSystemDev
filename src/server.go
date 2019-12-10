@@ -44,7 +44,38 @@ func main() {
 	})
 
 	e.GET("/cart", func(c echo.Context) error {
-		return c.Render(http.StatusOK, "ContentInTheCart", nil)
+		return c.Render(http.StatusOK, "cart", nil)
+	})
+
+	e.GET("/trend/rank1", func(c echo.Context) error {
+		return c.Render(http.StatusOK, "rank1", nil)
+	})
+	e.GET("/trend/rank2", func(c echo.Context) error {
+		return c.Render(http.StatusOK, "rank2", nil)
+	})
+	e.GET("/trend/rank3", func(c echo.Context) error {
+		return c.Render(http.StatusOK, "rank3", nil)
+	})
+	e.GET("/trend/rank4", func(c echo.Context) error {
+		return c.Render(http.StatusOK, "rank4", nil)
+	})
+	e.GET("/trend/rank5", func(c echo.Context) error {
+		return c.Render(http.StatusOK, "rank5", nil)
+	})
+	e.GET("/trend/rank6", func(c echo.Context) error {
+		return c.Render(http.StatusOK, "rank6", nil)
+	})
+	e.GET("/trend/rank7", func(c echo.Context) error {
+		return c.Render(http.StatusOK, "rank7", nil)
+	})
+	e.GET("/trend/rank8", func(c echo.Context) error {
+		return c.Render(http.StatusOK, "rank8", nil)
+	})
+	e.GET("/trend/rank9", func(c echo.Context) error {
+		return c.Render(http.StatusOK, "rank9", nil)
+	})
+	e.GET("/trend/rank10", func(c echo.Context) error {
+		return c.Render(http.StatusOK, "rank10", nil)
 	})
 
 	// 静的ファイルのため
