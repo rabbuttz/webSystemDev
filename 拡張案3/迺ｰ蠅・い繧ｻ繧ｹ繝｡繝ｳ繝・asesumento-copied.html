@@ -1,0 +1,252 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="author" content="70812071和田颯太郎>
+    <meta http-equiv="Content-Style-Type" content="Assessment.css"/>
+    <link rel="stylesheet" href="Assessment.css">
+    <meta name="keywords" content="" />
+  </head>
+  <title>環境マネジメントツール</title>
+  <body>
+    <h1>環境マネジメントツール</h1>
+    <h2 id="time"></h2>
+    <script>
+        var isClicked = 0;
+        console.log("isclicked = "+isClicked);
+
+        function management(){
+            alert("最適化します。");
+            isClicked = 1;
+            console.log("isClicked =" + isClicked);
+        }
+
+      time();
+      function time() {
+        var now = new Date();
+        document.getElementById("time").innerHTML = now.toLocaleTimeString();
+      }
+      setInterval("time()", 1000);
+    </script>
+    <table border="5">
+      <tr>
+        <th>店内温度</th>
+        <th>室外温度</th>
+        <th>室内気圧</th>
+        <th>室外気圧</th>
+        <th>店内湿度</th>
+        <th>室外湿度</th>
+        <th>店内CO2濃度</th>
+        <th>店内人間不快指数</th>
+        <th>店内書籍不快指数</th>
+      </tr>
+      <tr>
+        <td id="td-1">
+          <script type="text/javascript">
+            function update1() {
+              var a = Math.floor(Math.random() * 3) + 3;
+              console.log(a);
+              if(isClicked == false){
+                if (a <= 25) {
+                    str = a.toString();
+                    document.getElementById("td-1").innerText = str + "℃";
+                    return a;
+                } else {
+                    str = rand.toString();
+                    document.getElementById("td-1").innerText = str + "℃";
+                    return a;
+                }
+            } if (isClicked == true){
+
+                    str = (a+15).toString();
+                    document.getElementById("td-1").innerText = str + "℃";
+                    return a;
+            }
+            }
+
+            var a = update1();
+            timer1 = setInterval(() => {
+              a = update1();
+            }, 2000);
+          </script>
+        </td>
+
+        <td id="td-2">
+          <script type="text/javascript">
+            function update2() {
+              var b = Math.floor(Math.random() * 3) - 4;
+
+              if (b <= 25) {
+                str = b.toString();
+                document.getElementById("td-2").innerText = str + "℃";
+                return b;
+              } else {
+                str = rand.toString();
+                document.getElementById("td-2").innerText = str + "℃";
+                return b;
+              }
+            }
+            var b = update2();
+            timer2 = setInterval(() => {
+              b = update2();
+            }, 2000);
+          </script>
+        </td>
+        <td id="td-3">
+          <script type="text/javascript">
+            function update3() {
+              var c = Math.floor(Math.random() * 14) + 940;
+              if(isClicked == false){
+              if (c <= 1000) {
+                str = c.toString();
+                document.getElementById("td-3").innerText = str + "hPa";
+                return c;
+              } else {
+                str = rand.toString();
+                document.getElementById("td-3").innerText = str + "hPa";
+                return c;
+              }
+            } if(isClicked == true){
+                str = (c + 60).toString();
+                document.getElementById("td-3").innerText = str + "hPa";
+                return c;
+            }
+            }
+
+            var c = update3();
+            timer3 = setInterval(() => {
+              c = update3();
+            }, 1000);
+          </script>
+        </td>
+        <td id="td-4">
+          <script type="text/javascript">
+            function update4() {
+              var d = Math.floor(Math.random() * 14) + 940;
+              if (d <= 1000) {
+                str = d.toString();
+                document.getElementById("td-4").innerText = str + "hPa";
+                return d;
+              } else {
+                str = rand.toString();
+                document.getElementById("td-4").innerText = str + "hPa";
+                return d;
+              }
+            }
+            var d = update4();
+            timer4 = setInterval(() => {
+              d = update4();
+            }, 1000);
+          </script>
+        </td>
+        <td id="td-5">
+          <script type="text/javascript">
+            function update5() {
+              var e = Math.floor(Math.random() * 4) + 82;
+              if(isClicked == false){
+              if (e <= 1000) {
+                str = e.toString();
+                document.getElementById("td-5").innerText = str + "%";
+                return e;
+              } else {
+                str = rand.toString();
+                document.getElementById("td-5").innerText = str + "%";
+                return e;
+              }
+            } if(isClicked == true){
+                str = (e -26).toString();
+                document.getElementById("td-5").innerText = str + "%";
+                return e;
+            }
+            }
+            var e = update5();
+            timer5 = setInterval(() => {
+              e = update5();
+            }, 1000);
+          </script>
+        </td>
+        <td id="td-6">
+          <script type="text/javascript">
+            function update6() {
+              var f = Math.floor(Math.random() * 4) + 82;
+              if (f <= 1000) {
+                str = f.toString();
+                document.getElementById("td-6").innerText = str + "%";
+                return f;
+              } else {
+                str = rand.toString();
+                document.getElementById("td-6").innerText = str + "%";
+                return f;
+              }
+            }
+            var f = update6();
+            timer6 = setInterval(() => {
+              f = update6();
+            }, 1000);
+          </script>
+        </td>
+        <td id="td-8">
+          <script type="text/javascript">
+
+            function update8() {
+                if(isClicked == false){
+              var g = Math.floor(Math.random() * 2) + 330;
+              document.getElementById("td-8").innerText = g + "ppm";
+              return g;
+            } if(isClicked == true){
+                var g = Math.floor(Math.random() * 2) + 3;
+              document.getElementById("td-8").innerText = g + "ppm";
+              return g;
+            }
+
+
+        }
+            var l = update8();
+            timer8 = setInterval(() => {
+              l = update8();
+            }, 1000);
+
+          </script>
+        </td>
+        <td id="td-9">
+          <script type="text/javascript">
+            function updateHuman() {
+              var h = 0.81 * a + 0.01 * e * (0.99 * a - 14.3) + 46.3;
+              str = Math.round(h).toString();
+              document.getElementById("td-9").innerText = str;
+              return h;
+            }
+            var m = updateHuman();
+            timer9 = setInterval(() => {
+              m = updateHuman();
+            }, 1000);
+          </script>
+        </td>
+        <td id="td-10">
+          <script type="text/javascript">
+            function updateBook() {
+              var i = 0.81 * b + 0.01 * f * (0.99 * b - 14.3) + 46.3;
+              str = Math.round(i).toString();
+              document.getElementById("td-10").innerText = str;
+              console.log("a = " +a);
+              console.log("b = "+b);
+              console.log("i = " +i);
+            }
+            var n = updateBook();
+
+            timer10 = setInterval(() => {
+              n = updateBook();
+            }, 1000);
+          </script>
+        </td>
+      </tr>
+    </table>
+
+    <a href="#" class="btn-square-slant" onClick="management()">最適化</a>
+    <p>不快指数＝0.81×T＋0.01×H（0.99×T－14.3）＋46.3
+      　(気温をT℃,相対湿度をH%とする。)
+    </p>
+    <p><参考>指数70〜74で不快感を抱く人が出始め、75〜79で半数以上が、80〜85で
+      全員が不快と感じ、86を超えると我慢ができなくなる。</p>
+  </body>
+</html>
