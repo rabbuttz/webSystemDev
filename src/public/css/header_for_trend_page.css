@@ -1,0 +1,169 @@
+/* ヘッダー周り */
+header{
+  z-index: 10;
+  height: 64px;
+  position: absolute;
+  top: 0px;
+  background-color: #05003c;
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+/* ボディのやつ */
+body {
+    margin: 0;
+}
+/* Y書店の文字 */
+h1{
+    color: white;
+    position: absolute;
+    top: 0px;
+    left: 10px;
+}
+/* 商品名の位置とか */
+h2 {
+    position: absolute;
+    top: 10px;
+    padding-left: 10px;
+}
+/* サイドバーにあるトレンドｎ位のやつ */
+#trend_switch{
+    position: absolute;
+    top: 100px;
+    left: 10px;
+    font-size: 150%;
+    padding-top: 5px;
+    list-style: none;
+    display: block;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    overflow: hidden;
+}
+/* サイドバーにあるボタンの見た目とか */
+.btn {
+     float: left;
+     width: 200px;
+     margin: 0 0 2rem 10px;
+     padding: 5px;
+     font-size: 1.6rem;
+     text-align: center;
+     color: #FFF;
+     border: 1.5px solid rgba(0, 0, 0, .5);
+     border-radius: 5px;
+     opacity: .5;
+  }
+/* ボタンのマウスホバーのときの挙動とか */
+.btn:hover {
+     opacity: .8;
+     cursor: pointer;
+ }
+.inactive { opacity: 1.0; }
+.inactive:hover {
+      opacity: 1.0;
+      cursor: default;
+  }
+.boxDisplay { display: block; }
+.boxNone { display: none; }
+
+/* 商品の画像の位置 */
+#img_li {
+    position: absolute;
+    top: 100px;
+    list-style: none;
+}
+
+/* リストの微調整 */
+li {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+/* 画像に黒枠を付けた */
+.book {
+    border: 1px solid black;
+}
+
+/* ボーダーライン　あまり納得できていない */
+.pdc {
+    border-bottom: 1px solid black ;
+    border-width:100% ;
+}
+
+/* 詳細とかの */
+.pdc_txt{
+    float: right;
+    padding-left: 50px;
+}
+
+#trend_before {
+    text-decoration: none;
+    color: white;
+}
+
+/* ボタンのスタイル */
+.button {
+    width: 150px;
+    height: 40px;
+    border: 1px solid #26B8FF;
+    border-radius: 5px;
+    text-align: center;
+}
+/* マウスオーバー時のカラー */
+.button:hover {
+    background-color: #26B8FF;
+}
+/* リンク領域のスタイル（マウスポインタがが文字上だけでなくボタンの領域内のどこをクリックしてもリンクに飛べるようになってる) */
+.btn_link {
+    display: block;
+    padding: 5px 0;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    line-height: 30px;
+}
+/* マウスホバー時のカラー*/
+.btn_link:hover {
+    color: #fff;
+}
+
+/* サイドバーのあれこれ */
+#left_bar{
+    position: absolute;
+    top: 120px;
+    width:300px;
+    min-height:400px;
+    height: 900px;
+    float:left;
+    margin-top:10px;
+    background-color: skyblue;
+}
+/* サイドバーのあれこれ */
+#left_bar_before{
+    position: absolute;
+    top: 120px;
+    width:300px;
+    min-height:400px;
+    height: 1050px;
+    float:left;
+    margin-top:10px;
+    background-color: skyblue;
+}
+/* メインコンテンツのあれこれ */
+#main_contents {
+    padding-left:300px;
+    width:100%;
+    min-height:500px;
+    height:100%;
+    margin-top:10px;
+}
+
+/*
+以下をhtmlファイルにコピペ
+<header>
+    <link rel="stylesheet" type="text/css" href="./css/header.css">
+    <h1>Y書店</h1>
+</header>
+*/
