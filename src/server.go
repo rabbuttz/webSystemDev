@@ -40,6 +40,7 @@ func main() {
 
 	e.GET("/trend", func(c echo.Context) error {
 		// plan2/trend_page.htmlがサーブされる
+		// dataという構造体で単語を指定してhtmlファイルで読み込まれる
 		data := struct {
 			Word1 string
 			Word2 string
