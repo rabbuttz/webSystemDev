@@ -40,7 +40,30 @@ func main() {
 
 	e.GET("/trend", func(c echo.Context) error {
 		// plan2/trend_page.htmlがサーブされる
-		return c.Render(http.StatusOK, "trend_page", nil)
+		data := struct {
+			Word1 string
+			Word2 string
+			Word3 string
+			Word4 string
+			Word5 string
+			Word6 string
+			Word7 string
+			Word8 string
+			Word9 string
+			Word10 string
+		} {
+			Word1: "A",
+			Word2: "B",
+			Word3: "C",
+			Word4: "D",
+			Word5: "E",
+			Word6: "F",
+			Word7: "G",
+			Word8: "H",
+			Word9: "I",
+			Word10: "J",
+		}
+		return c.Render(http.StatusOK, "trend_page", data)
 	})
 
 	e.GET("/cart", func(c echo.Context) error {
