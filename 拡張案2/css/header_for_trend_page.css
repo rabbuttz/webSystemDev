@@ -51,16 +51,18 @@ h2 {
      font-size: 1.6rem;
      text-align: center;
      color: #FFF;
-     border: 1px solid rgba(0, 0, 0, .2);
+     border: 1.5px solid rgba(0, 0, 0, .5);
+     border-radius: 5px;
+     opacity: .5;
   }
 /* ボタンのマウスホバーのときの挙動とか */
 .btn:hover {
      opacity: .8;
      cursor: pointer;
  }
-.inactive { opacity: .5; }
+.inactive { opacity: 1.0; }
 .inactive:hover {
-      opacity: .5;
+      opacity: 1.0;
       cursor: default;
   }
 .boxDisplay { display: block; }
