@@ -29,6 +29,8 @@ func main() {
 		return c.Render(http.StatusOK, "trend_page", nil)
 	})
 
+	// 静的ファイルの:w
+	ため
 	e.Static("/plan2/css", "./plan2/css")
 	e.Static("/plan2/pic", "./plan2/pic")
 
