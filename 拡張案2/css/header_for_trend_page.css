@@ -98,6 +98,10 @@ li {
     padding-left: 50px;
 }
 
+#trend_before {
+    text-decoration: none;
+    color: white;
+}
 
 /* ボタンのスタイル */
 .button {
@@ -131,7 +135,18 @@ li {
     top: 120px;
     width:300px;
     min-height:400px;
-    height: 800px;
+    height: 900px;
+    float:left;
+    margin-top:10px;
+    background-color: skyblue;
+}
+/* サイドバーのあれこれ */
+#left_bar_before{
+    position: absolute;
+    top: 120px;
+    width:300px;
+    min-height:400px;
+    height: 1050px;
     float:left;
     margin-top:10px;
     background-color: skyblue;
