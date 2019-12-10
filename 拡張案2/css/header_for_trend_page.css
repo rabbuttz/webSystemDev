@@ -110,20 +110,18 @@ li {
 /* マウスオーバー時のカラー */
 .button:hover {
     background-color: #26B8FF;
-    padding: 5px 0;
-    text-align: center;
 }
-/* リンク領域のスタイル */
+/* リンク領域のスタイル（マウスポインタがが文字上だけでなくボタンの領域内のどこをクリックしてもリンクに飛べるようになってる) */
 .btn_link {
     display: block;
-    padding: 7px 0;
+    padding: 5px 0;
     color: black;
     text-align: center;
     text-decoration: none;
     line-height: 30px;
 }
 /* マウスホバー時のカラー*/
-.bbtn_link:hover {
+.btn_link:hover {
     color: #fff;
 }
 
