@@ -38,10 +38,7 @@ func main() {
 		}
 	}
 
-	e.GET("/trend", func(c echo.Context) error {
-		// plan2/trend_page.htmlがサーブされる
-		// dataという構造体で単語を指定してhtmlファイルで読み込まれる
-		data := struct {
+	data := struct {
 			Word1 string
 			Word2 string
 			Word3 string
@@ -64,6 +61,10 @@ func main() {
 			Word9: "I",
 			Word10: "J",
 		}
+
+	e.GET("/trend", func(c echo.Context) error {
+		// plan2/trend_page.htmlがサーブされる
+		// dataという構造体で単語を指定してhtmlファイルで読み込まれる
 		return c.Render(http.StatusOK, "trend_page", data)
 	})
 
@@ -72,34 +73,34 @@ func main() {
 	})
 
 	e.GET("/trend/rank1", func(c echo.Context) error {
-		return c.Render(http.StatusOK, "rank1", nil)
+		return c.Render(http.StatusOK, "rank1", data)
 	})
 	e.GET("/trend/rank2", func(c echo.Context) error {
-		return c.Render(http.StatusOK, "rank2", nil)
+		return c.Render(http.StatusOK, "rank2", data)
 	})
 	e.GET("/trend/rank3", func(c echo.Context) error {
-		return c.Render(http.StatusOK, "rank3", nil)
+		return c.Render(http.StatusOK, "rank3", data)
 	})
 	e.GET("/trend/rank4", func(c echo.Context) error {
-		return c.Render(http.StatusOK, "rank4", nil)
+		return c.Render(http.StatusOK, "rank4", data)
 	})
 	e.GET("/trend/rank5", func(c echo.Context) error {
-		return c.Render(http.StatusOK, "rank5", nil)
+		return c.Render(http.StatusOK, "rank5", data)
 	})
 	e.GET("/trend/rank6", func(c echo.Context) error {
-		return c.Render(http.StatusOK, "rank6", nil)
+		return c.Render(http.StatusOK, "rank6", data)
 	})
 	e.GET("/trend/rank7", func(c echo.Context) error {
-		return c.Render(http.StatusOK, "rank7", nil)
+		return c.Render(http.StatusOK, "rank7", data)
 	})
 	e.GET("/trend/rank8", func(c echo.Context) error {
-		return c.Render(http.StatusOK, "rank8", nil)
+		return c.Render(http.StatusOK, "rank8", data)
 	})
 	e.GET("/trend/rank9", func(c echo.Context) error {
-		return c.Render(http.StatusOK, "rank9", nil)
+		return c.Render(http.StatusOK, "rank9", data)
 	})
 	e.GET("/trend/rank10", func(c echo.Context) error {
-		return c.Render(http.StatusOK, "rank10", nil)
+		return c.Render(http.StatusOK, "rank10", data)
 	})
 
 	// 静的ファイルのため

@@ -14,6 +14,25 @@
 </header>
 
 <body>
+    <div id="left_bar">
+        <h2 id="trend">
+            現在のTwitterのトレンド
+        </h2>
+        <ul id = trend_switch>
+            <li class = btn> <a href="http://localhost:8080/trend/rank1" class="btn_link">{{.Word1}}</a>  </li>
+            <li class = btn> <a href="http://localhost:8080/trend/rank2" class="btn_link">{{.Word2}}</a>  </li>
+            <li class = btn> <a href="http://localhost:8080/trend/rank3" class="btn_link">{{.Word3}}</a>  </li>
+            <li class = btn> <a href="http://localhost:8080/trend/rank4" class="btn_link">{{.Word4}}</a>  </li>
+            <li class = btn> <a href="http://localhost:8080/trend/rank5" class="btn_link">{{.Word5}}</a>  </li>
+            <li class = btn> <a href="http://localhost:8080/trend/rank6" class="btn_link">{{.Word6}}</a>  </li>
+            <li class = btn> <a href="http://localhost:8080/trend/rank7" class="btn_link">{{.Word7}}</a>  </li>
+            <li class = btn> <a href="http://localhost:8080/trend/rank8" class="btn_link">{{.Word8}}</a>  </li>
+            <li class = btn> <a href="http://localhost:8080/trend/rank9" class="btn_link">{{.Word9}}</a>  </li>
+            <li class = btn> <a href="http://localhost:8080/trend/rank10" class="btn_link">{{.Word10}}</a>  </li>
+            <li class = btn> <a href="http://localhost:8080/trend/past" id="trend_before">過去のトレンド</a> </li>
+        </ul>
+    </div>
+    <div id = main_contents>
         <div id = contents9>
             <ul id = img_li>
                 <div class = pdc>
@@ -66,6 +85,7 @@
                 </div>
             </ul>
         </div>
+    </div>
 </body>
 </html>
 {{end}}
