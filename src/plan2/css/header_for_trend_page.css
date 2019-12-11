@@ -28,6 +28,11 @@ h2 {
     top: 10px;
     padding-left: 10px;
 }
+
+.pdc_name {
+    font-size: 140%;
+}
+
 /* サイドバーにあるトレンドｎ位のやつ */
 #trend_switch{
     position: absolute;
@@ -96,6 +101,7 @@ li {
 .pdc_txt{
     float: right;
     padding-left: 50px;
+    width: 800px;
 }
 
 #trend_before {
@@ -154,16 +160,8 @@ li {
 /* メインコンテンツのあれこれ */
 #main_contents {
     padding-left:300px;
-    width:100%;
+    width:100%-300px;
     min-height:500px;
     height:100%;
     margin-top:10px;
 }
-
-/*
-以下をhtmlファイルにコピペ
-<header>
-    <link rel="stylesheet" type="text/css" href="./css/header.css">
-    <h1>Y書店</h1>
-</header>
-*/
