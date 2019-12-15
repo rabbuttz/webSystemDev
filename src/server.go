@@ -4,9 +4,14 @@ import (
 	"net/http"
 	"html/template"
 	"io"
+	"io/ioutil"
 	"errors"
+	"encoding/json"
+	"strings"
 
+	// 以下のライブラリはgo getする必要あり
 	"github.com/labstack/echo"
+	"github.com/dghubble/oauth1"
 )
 
 // テンプレートのレンダラーを作る
@@ -28,6 +33,7 @@ func main() {
 		templates: template.Must(template.ParseGlob("plan2/*.html")),
 	}
 
+	// エラー処理（404(NotFound)と500(ServerError)のみ）
 	e.HTTPErrorHandler = func(err error, c echo.Context) {
 		if he, ok := err.(*echo.HTTPError); ok {
 			if he.Code == 404 {
@@ -37,6 +43,9 @@ func main() {
 			}
 		}
 	}
+
+	country := "23424856" // トレンドを取得する地域のIDを指定。これは日本
+	tags := getTrends(country) // トレンドを取得する関数を呼出
 
 	data := struct {
 			Word1 string
@@ -50,16 +59,17 @@ func main() {
 			Word9 string
 			Word10 string
 		} {
-			Word1: "A",
-			Word2: "B",
-			Word3: "C",
-			Word4: "D",
-			Word5: "E",
-			Word6: "F",
-			Word7: "G",
-			Word8: "H",
-			Word9: "I",
-			Word10: "J",
+			/*tagsの中にトレンドのハッシュタグが入っているのでそれをWord1～10に代入*/
+			Word1: tags[0],
+			Word2: tags[1],
+			Word3: tags[2],
+			Word4: tags[3],
+			Word5: tags[4],
+			Word6: tags[5],
+			Word7: tags[6],
+			Word8: tags[7],
+			Word9: tags[8],
+			Word10: tags[9],
 		}
 
 	e.GET("/trend", func(c echo.Context) error {
@@ -109,3 +119,77 @@ func main() {
 
 	e.Logger.Fatal(e.Start(":8080"))
 }
+
+// トレンドのタグを取得する関数
+func getTrends(country string) []string {
+	var listHashTags []string
+
+	/*APIキーを入力*/
+	consumerKey := "339ttP5v0cWVKlBmkIeyfSjmk"
+	consumerSecret := "MZJXV2SbTiNxeD0yf7dhortxX69IdP78ADlP4kPxrN9jdFssiV"
+	accessToken := "955371524403298304-sKHG03JGLUoIJ13m9LgwtLWyacT3K4f"
+	accessSecret := "BjtC6S7ger7RiOm8gGjo0MbUUn6UuYUajOvmnleCUK0FN"
+
+	// APIキーが未入力時のエラー出力
+	if consumerKey == "" || consumerSecret == "" || accessToken == "" || accessSecret == "" {
+		panic("Missing required environment variable")
+	}
+
+	config := oauth1.NewConfig(consumerKey, consumerSecret)
+	token := oauth1.NewToken(accessToken, accessSecret)
+
+	httpClient := config.Client(oauth1.NoContext, token)
+
+	// トレンド取得の地域指定
+	path := "https://api.twitter.com/1.1/trends/place.json?id=" + country
+
+	resp, _ := httpClient.Get(path)
+	defer resp.Body.Close()
+	body, _ := ioutil.ReadAll(resp.Body)
+
+	// JSON形式の[]をカット
+	var JSON = strings.TrimLeft(string(body), "[")
+	JSON = strings.TrimRight(JSON, "]")
+
+	var info map[string]interface{}
+	json.Unmarshal([]byte(JSON), &info)
+	trends := info["trends"].([]interface{})
+
+	for _, element := range trends {
+		if trendList, ok := element.(map[string]interface{}); ok {
+			for key, value := range trendList {
+				if strings.Contains(key, "name") && strings.Contains(value.(string), "") {
+					listHashTags = append(listHashTags, value.(string))
+				}
+			}
+		}
+	}
+	return listHashTags
+}
+
+/*
+func viewHashTagHandler(w http.ResponseWriter, r *http.Request) {
+	if r.URL.Path != "/trend" {
+		http.Error(w, "404 not found.", http.StatusNotFound)
+		return
+	}
+
+	switch r.Method {
+	case "GET":
+		getPage, _ := template.ParseFiles("trend_page.html")
+		getPage.Execute(w, r)
+	case "POST":
+		var country string
+		if err := r.ParseForm(); err != nil {
+			fmt.Fprintf(w, "ParseForm() err: %v", err)
+			return
+		}
+		country = r.FormValue("country")
+		tags := getHashTags(country)
+		postPage, _ := template.ParseFiles("trend_page.html")
+		postPage.Execute(w, tags)
+	default:
+		fmt.Fprintf(w, "Unable to get result.")
+	}
+}
+*/

@@ -139,9 +139,9 @@ li {
 #left_bar{
     position: absolute;
     top: 120px;
-    width:300px;
-    min-height:400px;
-    height:1000px;
+    width: 300px;
+    min-height: 400px;
+    height: 1200px;
     float:left;
     margin-top:10px;
     background-color: skyblue;
@@ -152,7 +152,7 @@ li {
     top: 120px;
     width:300px;
     min-height:400px;
-    height: 1050px;
+    height: 1400px;
     float:left;
     margin-top:10px;
     background-color: skyblue;
