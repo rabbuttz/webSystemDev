@@ -8,10 +8,15 @@ import (
 	"errors"
 	"encoding/json"
 	"strings"
+	// "database/sql"
+	// "fmt"
 
 	// 以下のライブラリはgo getする必要あり
 	"github.com/labstack/echo"
 	"github.com/dghubble/oauth1"
+	// "github.com/lib/pq"
+
+	"ybookSql"
 )
 
 // テンプレートのレンダラーを作る
@@ -112,6 +117,7 @@ func main() {
 	e.GET("/trend/rank10", func(c echo.Context) error {
 		return c.Render(http.StatusOK, "rank10", data)
 	})
+	e.GET("/sql", ybookSql.GetBooks())
 
 	// 静的ファイルのため
 	e.Static("/plan2/css", "./plan2/css")
@@ -166,6 +172,30 @@ func getTrends(country string) []string {
 	}
 	return listHashTags
 }
+
+/*
+func getSql() (bk []books) {
+	db, err := sql.Open("postgres", "host=127.0.0.1 port=5432 user=bi18026 password=Sshk3812-bi dbname=ybookdb sslmode=disable")
+	defer db.Close()
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	rows, err := db.Query("SELECT * FROM books")
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	var bk []books
+	for rows.Next() {
+		var b books
+		rows.Scan(&b.name, &b.plot)
+		bk = append(bk, b)
+	}
+	return bk
+}
+*/
+
 
 /*
 func viewHashTagHandler(w http.ResponseWriter, r *http.Request) {
