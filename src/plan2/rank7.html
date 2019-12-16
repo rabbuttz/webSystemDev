@@ -1,6 +1,7 @@
 {{define "rank7"}}
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,72 +19,72 @@
         <h2 id="trend">
             現在のTwitterのトレンド
         </h2>
-        <ul id = trend_switch>
-            <li class = btn> <a href="http://localhost:8080/trend/rank1" class="btn_link">{{.Word1}}</a>  </li>
-            <li class = btn> <a href="http://localhost:8080/trend/rank2" class="btn_link">{{.Word2}}</a>  </li>
-            <li class = btn> <a href="http://localhost:8080/trend/rank3" class="btn_link">{{.Word3}}</a>  </li>
-            <li class = btn> <a href="http://localhost:8080/trend/rank4" class="btn_link">{{.Word4}}</a>  </li>
-            <li class = btn> <a href="http://localhost:8080/trend/rank5" class="btn_link">{{.Word5}}</a>  </li>
-            <li class = btn> <a href="http://localhost:8080/trend/rank6" class="btn_link">{{.Word6}}</a>  </li>
-            <li class = btn> <a href="http://localhost:8080/trend/rank7" class="btn_link">{{.Word7}}</a>  </li>
-            <li class = btn> <a href="http://localhost:8080/trend/rank8" class="btn_link">{{.Word8}}</a>  </li>
-            <li class = btn> <a href="http://localhost:8080/trend/rank9" class="btn_link">{{.Word9}}</a>  </li>
-            <li class = btn> <a href="http://localhost:8080/trend/rank10" class="btn_link">{{.Word10}}</a>  </li>
-            <li class = btn> <a href="http://localhost:8080/trend/past" id="trend_before">過去のトレンド</a> </li>
+        <ul id=trend_switch>
+            <li class=btn> <a href="http://localhost:8080/trend/rank1" class="btn_link">{{.Word1}}</a> </li>
+            <li class=btn> <a href="http://localhost:8080/trend/rank2" class="btn_link">{{.Word2}}</a> </li>
+            <li class=btn> <a href="http://localhost:8080/trend/rank3" class="btn_link">{{.Word3}}</a> </li>
+            <li class=btn> <a href="http://localhost:8080/trend/rank4" class="btn_link">{{.Word4}}</a> </li>
+            <li class=btn> <a href="http://localhost:8080/trend/rank5" class="btn_link">{{.Word5}}</a> </li>
+            <li class=btn> <a href="http://localhost:8080/trend/rank6" class="btn_link">{{.Word6}}</a> </li>
+            <li class=btn> <a href="http://localhost:8080/trend/rank7" class="btn_link">{{.Word7}}</a> </li>
+            <li class=btn> <a href="http://localhost:8080/trend/rank8" class="btn_link">{{.Word8}}</a> </li>
+            <li class=btn> <a href="http://localhost:8080/trend/rank9" class="btn_link">{{.Word9}}</a> </li>
+            <li class=btn> <a href="http://localhost:8080/trend/rank10" class="btn_link">{{.Word10}}</a> </li>
+            <li class=btn> <a href="http://localhost:8080/trend/past" id="trend_before">過去のトレンド</a> </li>
         </ul>
     </div>
-    <div id = main_contents>
-        <div id = contents7>
-            <ul id = img_li>
-                <div class = pdc>
+    <div id=main_contents>
+        <div id=contents7>
+            <ul id=img_li>
+                <div class=pdc>
                     <li>
-                        <img class = book src="../plan2/pic/book_sample.png" alt="本">
+                        <img class=book src="../plan2/pic/book_sample.png" alt="本">
                         <div class="pdc_txt">
-                            <h3 class = pdc_name>商品名</h3>
-                            <p class = prc>¥0707</p>
+                            <h3 class=pdc_name>{{.BookName25}}</h3>
+                            <p class=prc>¥{{.BookPrice25}}</p>
                             <div class="button">
                                 <a href=" http://localhost:8080/cart " class="btn_link">カートに入れる</a>
                             </div>
-                            <p class="txt">詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細</p>
+                            <p class="txt">{{.BookPlot25}}</p>
                         </div>
                     </li>
                 </div>
-                <div class = pdc>
+                <div class=pdc>
                     <li>
-                        <img class = book src="../plan2/pic/book_sample.png" alt="本">
+                        <img class=book src="../plan2/pic/book_sample.png" alt="本">
                         <div class="pdc_txt">
-                            <h3 class = pdc_name>商品名</h3>
-                            <p class = prc>¥0707</p>
+                            <h3 class=pdc_name>{{.BookName26}}</h3>
+                            <p class=prc>¥{{.BookPrice26}}</p>
                             <div class="button">
                                 <a href=" http://localhost:8080/cart " class="btn_link">カートに入れる</a>
                             </div>
-                            <p class="txt">詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細</p>
+                            <p class="txt">{{.BookPlot26}}</p>
                         </div>
                     </li>
                 </div>
-                <div class = pdc>
+                <div class=pdc>
                     <li>
-                        <img class = book src="../plan2/pic/book_sample.png" alt="本">
+                        <img class=book src="../plan2/pic/book_sample.png" alt="本">
                         <div class="pdc_txt">
-                            <h3 class = pdc_name>商品名</h3>
-                            <p class = prc>¥0707</p>
+                            <h3 class=pdc_name>{{.BookName27}}</h3>
+                            <p class=prc>¥{{.BookPrice27}}</p>
                             <div class="button">
                                 <a href=" http://localhost:8080/cart " class="btn_link">カートに入れる</a>
                             </div>
-                            <p class="txt">詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細</p>
+                            <p class="txt">{{.BookPlot27}}</p>
                         </div>
                     </li>
                 </div>
-                <div class = pdc>
+                <div class=pdc>
                     <li>
-                        <img class = book src="../plan2/pic/book_sample.png" alt="本">
+                        <img class=book src="../plan2/pic/book_sample.png" alt="本">
                         <div class="pdc_txt">
-                            <h3 class = pdc_name>商品名</h3>
-                            <p class = prc>¥0707</p>
+                            <h3 class=pdc_name>{{.BookName28}}</h3>
+                            <p class=prc>¥{{.BookPrice28}}</p>
                             <div class="button">
                                 <a href=" http://localhost:8080/cart " class="btn_link">カートに入れる</a>
                             </div>
-                            <p class="txt">詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細</p>
+                            <p class="txt">{{.BookPlot28}}</p>
                         </div>
                     </li>
                 </div>
