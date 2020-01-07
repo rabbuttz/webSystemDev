@@ -8,14 +8,13 @@ import (
 	"errors"
 	"encoding/json"
 	"strings"
-	// "database/sql"
-	// "fmt"
+	// "fmt"		// デバッグに使ったり使わなかったり、標準出力用の
 
 	// 以下のライブラリはgo getする必要あり
-	"github.com/labstack/echo"
-	"github.com/dghubble/oauth1"
-	"gopkg.in/mgo.v2"
-	// "gopkg.in/mgo.v2/bson"
+	"github.com/labstack/echo"		// echo
+	"github.com/dghubble/oauth1"	// API認証の
+	"gopkg.in/mgo.v2"				// mongoDBとの接続
+	// "gopkg.in/mgo.v2/bson"		// DB検索のときに使う
 )
 
 // テンプレートのレンダラーを作る
@@ -41,7 +40,7 @@ type Books struct {
 func main() {
 	e := echo.New()
 
-	// plan/*を読み込む仕組み
+	// "plan/*"を読み込む仕組み
 	e.Renderer = &Renderer{
 		templates: template.Must(template.ParseGlob("plan2/*.html")),
 	}
@@ -67,7 +66,7 @@ func main() {
 	var results []Books
 	db.C("Books").Find(nil).All(&results)
 
-
+/*以下やり方が分からなくて全部初期化したksコード*/
 	data := struct {
 			Word1		string
 			Word2		string
@@ -257,6 +256,7 @@ func main() {
 			BookPlot9:	results[8].Plot,
 			BookPlot10:	results[9].Plot,
 			BookPlot11:	results[10].Plot,
+
 			BookPlot12:	results[11].Plot,
 			BookPlot13:	results[12].Plot,
 			BookPlot14:	results[13].Plot,
@@ -325,16 +325,17 @@ func main() {
 	e.Logger.Fatal(e.Start(":8080"))
 }
 
-// トレンドのタグを取得する関数
+// トレンドワードを取得する関数
 
 func getTrends(country string) []string {
 	var listHashTags []string
 
-	/*APIキーを入力*/
-	consumerKey := "339ttP5v0cWVKlBmkIeyfSjmk"
-	consumerSecret := "MZJXV2SbTiNxeD0yf7dhortxX69IdP78ADlP4kPxrN9jdFssiV"
-	accessToken := "955371524403298304-sKHG03JGLUoIJ13m9LgwtLWyacT3K4f"
-	accessSecret := "BjtC6S7ger7RiOm8gGjo0MbUUn6UuYUajOvmnleCUK0FN"
+	/*TwitterAPIキーを入力*/
+
+	consumerKey := "**********"
+	consumerSecret := "**********"
+	accessToken := "**********"
+	accessSecret := "**********"
 
 	// APIキーが未入力時のエラー出力
 	if consumerKey == "" || consumerSecret == "" || accessToken == "" || accessSecret == "" {
