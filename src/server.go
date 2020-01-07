@@ -8,7 +8,7 @@ import (
 	"errors"
 	"encoding/json"
 	"strings"
-	// "fmt"		// デバッグに使ったり使わなかったり、標準出力用の
+	// "fmt"		// デバッグに使ったり使わなかったり、標準出力用とか
 
 	// 以下のライブラリはgo getする必要あり
 	"github.com/labstack/echo"		// echo
@@ -28,6 +28,7 @@ func (r *Renderer) Render(w io.Writer, name string, data interface{}, c echo.Con
 	return r.templates.ExecuteTemplate(w, name, data)
 }
 
+// DBから取得したデータの入る構造体
 type Books struct {
 	IsbnCode	string	`bson:"ISBNcode"`
 	Name		string	`bson:"Name"`
@@ -40,7 +41,7 @@ type Books struct {
 func main() {
 	e := echo.New()
 
-	// "plan/*"を読み込む仕組み
+	// "plan/*"のディレクトリを読み込む仕組み
 	e.Renderer = &Renderer{
 		templates: template.Must(template.ParseGlob("plan2/*.html")),
 	}
@@ -56,12 +57,12 @@ func main() {
 		}
 	}
 
-	country := "23424856" // トレンドを取得する地域のIDを指定。これは日本
+	country := "23424856" // トレンドを取得する地域のIDを指定。これは日本 woeidでぐぐるとIDがいろいろ出てくる
 	tags := getTrends(country) // トレンドを取得する関数を呼出
 
-	session, _ := mgo.Dial("mongodb://localhost")
+	session, _ := mgo.Dial("mongodb://localhost")	// mongoDBとの接続
 		defer session.Close()
-	db := session.DB("ybookDataBase")
+	db := session.DB("ybookDataBase")// "ybookDataBaseというデータベースを指定して接続"
 
 	var results []Books
 	db.C("Books").Find(nil).All(&results)
